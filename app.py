@@ -8,7 +8,7 @@ from sqlalchemy import create_engine, Date, text
 
 # Leer variables de entorno
 USER = os.environ['USER']
-PWD = os.environ['PASSWORD']
+PASSWORD = os.environ['PASSWORD']
 HOST = os.environ['HOST']
 PORT = os.environ['PORT']
 DB = os.environ['DB']
@@ -75,7 +75,7 @@ def connect_to_postgres():
     # Leer la configuración desde el archivo INI
  
            # Establecer la conexión a la base de datos PostgreSQL
-    url = f"postgresql://{USER}:{PWD}@{HOST}:{PORT}/{DB}?sslmode=require"
+    url = f"postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DB}?sslmode=require"
     conn = sa.create_engine(url,
                               connect_args={"options": f"-c search_path={SCHEMA}"}
                               )
