@@ -6,14 +6,14 @@ import sqlalchemy as sa
 from sqlalchemy import create_engine, Date, text
 #from config import *
 
-
 # Leer variables de entorno
-HOST = os.environ.get("HOST")
-PORT = os.environ.get("PORT")
-USER = os.environ.get("USER")
-PWD = os.environ.get("PASSWORD")
-DB = os.environ.get("DB")
-SCHEMA = os.environ.get("SCHEMA")
+USER = os.environ['USER']
+PWD = os.environ['PASSWORD']
+HOST = os.environ['HOST']
+PORT = os.environ['PORT']
+DB = os.environ['DATABASE']
+SCHEMA = os.environ['SCHEMA']
+
 
 # Función que convierte un Json en un DataFrame
 def build_table(json_data):
