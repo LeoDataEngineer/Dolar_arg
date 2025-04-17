@@ -11,7 +11,7 @@ USER = os.environ['USER']
 PWD = os.environ['PASSWORD']
 HOST = os.environ['HOST']
 PORT = os.environ['PORT']
-DB = os.environ['DATABASE']
+DB = os.environ['DB']
 SCHEMA = os.environ['SCHEMA']
 
 
