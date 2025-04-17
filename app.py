@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 from datetime import datetime, date, timedelta
 import os
-#from configparser import ConfigParser
 import sqlalchemy as sa
 from sqlalchemy import create_engine, Date, text
 from config import *
