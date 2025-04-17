@@ -4,8 +4,16 @@ from datetime import datetime, date, timedelta
 import os
 import sqlalchemy as sa
 from sqlalchemy import create_engine, Date, text
-from config import *
+#from config import *
 
+
+# Leer variables de entorno
+HOST = os.environ.get("HOST")
+PORT = os.environ.get("PORT")
+USER = os.environ.get("USER")
+PWD = os.environ.get("PASSWORD")
+DB = os.environ.get("DB")
+SCHEMA = os.environ.get("SCHEMA")
 
 # Función que convierte un Json en un DataFrame
 def build_table(json_data):
@@ -67,9 +75,9 @@ def connect_to_postgres():
     # Leer la configuración desde el archivo INI
  
            # Establecer la conexión a la base de datos PostgreSQL
-    url = f"postgresql://{user}:{pwd}@{host}:{port}/{db}?sslmode=require"
+    url = f"postgresql://{USER}:{PWD}@{HOST}:{PORT}/{DB}?sslmode=require"
     conn = sa.create_engine(url,
-                              connect_args={"options": f"-c search_path={schema}"}
+                              connect_args={"options": f"-c search_path={SCHEMA}"}
                               )
     return conn
 
