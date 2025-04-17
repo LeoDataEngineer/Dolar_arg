@@ -12,7 +12,7 @@ jobs:
       HOST: ${{ secrets.HOST }}
       PORT: ${{ secrets.PORT }}
       USER: ${{ secrets.USER }}
-      PWD: ${{ secrets.PASSWORD }}
+      PASSWORD: ${{ secrets.PASSWORD }}
       DB: ${{ secrets.DB }}
       SCHEMA: ${{ secrets.SCHEMA }}
       
